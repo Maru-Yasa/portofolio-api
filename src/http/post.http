@@ -1,0 +1,42 @@
+# baseURL
+@baseURL = http://localhost:3000/api/v1/post
+
+###
+# Find All Post
+GET {{ baseURL }}/all
+
+###
+# Find Post By Id
+GET {{ baseURL }}/Post/1
+
+###
+# Create Post
+POST {{ baseURL }}/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjhlM2RjODdkNzA5NmQ2ODExOThmZmEiLCJpYXQiOjE2NTM1MzIzNzYsImV4cCI6MTY1MzUzNTk3Nn0.9sZh98Q8JO6MJNjtBbEGEgZeCBE0VVPdmXpU97aYqtg
+
+{
+    "title": "Test post",
+    "author": "Maru yasa",
+    "thumbnail": "default.png",
+    "content": "test content"
+}
+
+###
+# Modify Post By Id
+PUT {{ baseURL }}/update?id=628ee7bf7196142b46d8df87
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjhlM2RjODdkNzA5NmQ2ODExOThmZmEiLCJpYXQiOjE2NTM1MzIzNzYsImV4cCI6MTY1MzUzNTk3Nn0.9sZh98Q8JO6MJNjtBbEGEgZeCBE0VVPdmXpU97aYqtg
+
+{
+    "title": "Test post edited 2",
+    "author": "Maru yasa",
+    "thumbnail": "default.png",
+    "content": "test content"
+}
+
+###
+# Delete User By Id
+DELETE {{ baseURL }}/delete?id=628ee7bf7196142b46d8df89
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjhlM2RjODdkNzA5NmQ2ODExOThmZmEiLCJpYXQiOjE2NTM1MzIzNzYsImV4cCI6MTY1MzUzNTk3Nn0.9sZh98Q8JO6MJNjtBbEGEgZeCBE0VVPdmXpU97aYqtg
+Content-Type: application/json
